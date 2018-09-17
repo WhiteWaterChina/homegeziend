@@ -5,11 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dataDetail:[
-      {name:'指甲刀', number:"1"},
-      {name:'绳子', number:"2"},
-      {name:'扑克', number:"10"}
-    ]
+    dataDetail:[]
   },
   /**
    * 生命周期函数--监听页面加载
@@ -23,6 +19,13 @@ Page({
       'positionMin': positionMin,
       'idInfo': idInfo
     })
+    const db = wx.cloud.database('homespace')
+    db.collection(positionMin).get({
+        success: function (res) {
+          // res.data 是包含以上定义的两条记录的数组
+          console.log(res.data)
+        }
+      })
   },
 
   /**
