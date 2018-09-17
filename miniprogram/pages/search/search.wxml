@@ -1,0 +1,6 @@
+<!--pages/search/search.wxml-->
+<view class='text-title'>
+  <text>当前格子所在的位置:{{position}}</text>
+</view>
+
+

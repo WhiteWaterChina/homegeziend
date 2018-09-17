@@ -1,0 +1,49 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+      "pages/livingroom/livingroom",
+      "pages/firstbedroom/firstbedroom",
+      "pages/secondbedroom/secondbedroom",
+      "pages/search/search",
+      "pages/showdata/showdata"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "我的格子",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#666666",
+    "selectedColor": "#06bd04",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/livingroom/livingroom",
+        "text": "客厅",
+        "iconPath": "images/livingroom.png",
+        "selectedIconPath": "images/livingroom.png"
+      },
+      {
+        "pagePath": "pages/firstbedroom/firstbedroom",
+        "text": "主卧",
+        "iconPath": "images/firstbedroom.png",
+        "selectedIconPath": "images/firstbedroom.png"
+      }
+    ]
+  }
+}

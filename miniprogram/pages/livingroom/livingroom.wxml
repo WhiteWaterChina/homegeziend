@@ -1,0 +1,31 @@
+<!--pages/livingroom/livingroom.wxml-->
+<view class='navigator-view'>
+  <button class='navigator-btn' bindtap='changeshowstateyangtai'>阳台</button>
+  <view hidden='{{hiddenstateyangtai}}'>
+      <view class='view-sub-1'>
+        <button bindtap='showdatayangtai' class='yangtai-btn' data-id="1">1</button>
+        <button bindtap='showdatayangtai' class='yangtai-btn' data-id="2">2</button>
+        <button bindtap='showdatayangtai' class='yangtai-btn' data-id="3">3</button>
+    </view>
+    <view class='view-sub-1'>
+        <button bindtap='showdatayangtai' class='yangtai-btn' data-id='4'>4</button>
+        <button bindtap='showdatayangtai' class='yangtai-btn' data-id='5'>5</button>
+        <button bindtap='showdatayangtai' class='yangtai-btn' data-id='6'>6</button>
+    </view>
+  </view>
+
+  <view class='navigator-btn' bindtap='changeshowstatedianshigui'>电视柜</view>
+      <view hidden='{{hiddenstatedianshigui}}'>
+      <view class='view-sub-1'>
+        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id="1">1</button>
+        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id="2">2</button>
+        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id="3">3</button>
+    </view>
+    <view class='view-sub-1'>
+        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id='4'>4</button>
+        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id='5'>5</button>
+        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id='6'>6</button>
+    </view>
+  </view>
+</view>
+

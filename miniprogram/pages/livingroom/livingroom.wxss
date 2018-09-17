@@ -1,0 +1,29 @@
+/* pages/livingroom/livingroom.wxss */
+.navigator-view {
+  margin-top: 150px;
+  width: 80%;
+  height: 200px;
+  line-height: 48px;
+  margin-left: 35px;
+}
+.navigator-btn {
+  color: #CC3300;
+  background-color: #33FFFF; 
+  text-align: center;
+  border: 1px solid #d0d0d0;
+}
+.view-sub-1 {
+  display: flex;
+  flex-flow: row;
+}
+.yangtai-btn {
+  width: 30%;
+  height: 100px;
+  border: 1px solid #d0d0d0;
+}
+.view-show {
+  display: block;
+}
+.view-hide {
+  display: none;
+}

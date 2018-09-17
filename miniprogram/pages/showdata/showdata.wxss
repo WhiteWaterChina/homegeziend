@@ -1,0 +1,62 @@
+/* pages/showdata/showdata.wxss */
+.class-mainbody {
+  display: flex;
+  flex-flow: column;
+}
+.class-index {
+  width: 40rpx;
+  height: 30px;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+}
+.image-index {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  width: 100rpx;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  left: 80rpx;
+  border: 1px solid #d0d0d0;
+}
+.text-name-line {
+  text-align: center;
+  position: fixed;
+  left: 200rpx;
+  width: 200rpx;
+  height: 30px;
+  border: 1px solid #d0d0d0;
+}
+.text-number-title {
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  position: relative;
+  left: 350rpx;
+  width: 40rpx;
+}
+.text-number {
+  text-align: left;
+  border: 1px solid #d0d0d0;
+  position: relative;
+  left: 400rpx;
+  width: 40rpx;
+}
+.text-position-line {
+  text-align: center;
+  height: 30px;
+  width: 100rpx;
+  position: fixed;
+  right: 110rpx;
+  border: 1px solid #d0d0d0;
+}
+.image-reduce {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  width: 80rpx;
+  height: 25px;
+  text-align: center;
+  position: fixed;
+  right: 10rpx;
+  border: 1px solid #d0d0d0;
+  }
+
+
+
