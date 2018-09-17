@@ -14,18 +14,27 @@ Page({
     var positionMax = options.positionMax
     var positionMin = options.positionMin
     var idInfo = options.id
+  
+    const db = wx.cloud.database('homespace')
+    db.collection('homegezi').where({
+      positionMax: positionMax,
+      positionMin: positionMin,
+      id: parseInt(idInfo)
+    }).get({
+      success: function (res) {
+        // res.data 是包含以上定义的两条记录的数组
+        this.setData({
+          'dataDetail': res.data
+        })
+      }
+    })
+
+
     this.setData({
       'positionMax': positionMax,
       'positionMin': positionMin,
       'idInfo': idInfo
     })
-    const db = wx.cloud.database('homespace')
-    db.collection(positionMin).get({
-        success: function (res) {
-          // res.data 是包含以上定义的两条记录的数组
-          console.log(res.data)
-        }
-      })
   },
 
   /**
