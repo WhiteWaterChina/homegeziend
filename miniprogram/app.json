@@ -8,18 +8,20 @@
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
-      "pages/livingroom/livingroom",
-      "pages/firstbedroom/firstbedroom",
-      "pages/secondbedroom/secondbedroom",
-      "pages/search/search",
-      "pages/showdata/showdata"
+    "pages/livingroom/livingroom",
+    "pages/firstbedroom/firstbedroom",
+    "pages/secondbedroom/secondbedroom",
+    "pages/search/search",
+    "pages/showdata/showdata",
+    "pages/adddata/adddata"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "我的格子",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "position": "bottom",

@@ -1,7 +1,27 @@
 /* pages/showdata/showdata.wxss */
+.class-title {
+  margin-top: 10px;
+  color: #993300;
+}
+.class-plus-image {
+  position: absolute;
+  right: 20rpx;
+  height: 30px;
+  width: 30px;
+}
 .class-mainbody {
   display: flex;
   flex-flow: column;
+  margin-top: 50px;
+}
+.title {
+  height: 20px;
+}
+.line-total {
+  margin-top: 30px;
+}
+.class-line {
+  height: 30px;
 }
 .class-index {
   width: 40rpx;
@@ -10,19 +30,19 @@
   text-align: center;
 }
 .image-index {
-  margin: 10rpx 10rpx 10rpx 10rpx;
+  /* margin: 10rpx 10rpx 10rpx 10rpx; */
   width: 100rpx;
   height: 30px;
   text-align: center;
   position: fixed;
-  left: 80rpx;
+  left: 85rpx;
   border: 1px solid #d0d0d0;
 }
 .text-name-line {
   text-align: center;
   position: fixed;
   left: 200rpx;
-  width: 200rpx;
+  width: 150rpx;
   height: 30px;
   border: 1px solid #d0d0d0;
 }
@@ -30,8 +50,9 @@
   text-align: center;
   border: 1px solid #d0d0d0;
   position: relative;
-  left: 350rpx;
+  left: 300rpx;
   width: 40rpx;
+  height: 28px;
 }
 .text-number {
   text-align: left;
@@ -39,19 +60,20 @@
   position: relative;
   left: 400rpx;
   width: 40rpx;
+  height: 30px;
 }
 .text-position-line {
   text-align: center;
+  width: 150rpx;
   height: 30px;
-  width: 100rpx;
   position: fixed;
   right: 110rpx;
   border: 1px solid #d0d0d0;
 }
 .image-reduce {
-  margin: 10rpx 10rpx 10rpx 10rpx;
+  /* margin: 5rpx 5rpx 5rpx 5rpx; */
   width: 80rpx;
-  height: 25px;
+  height: 30px;
   text-align: center;
   position: fixed;
   right: 10rpx;

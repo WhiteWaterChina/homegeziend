@@ -2,10 +2,10 @@
 <view class='navigator-view'>
   <button class='navigator-btn' bindtap='changeshowstateyangtai'>阳台</button>
   <view hidden='{{hiddenstateyangtai}}'>
-      <view class='view-sub-1'>
-        <button bindtap='showdatayangtai' class='yangtai-btn' data-id="1">1</button>
-        <button bindtap='showdatayangtai' class='yangtai-btn' data-id="2">2</button>
-        <button bindtap='showdatayangtai' class='yangtai-btn' data-id="3">3</button>
+    <view class='view-sub-1'>
+      <button bindtap='showdatayangtai' class='yangtai-btn' data-id="1">1</button>
+      <button bindtap='showdatayangtai' class='yangtai-btn' data-id="2">2</button>
+      <button bindtap='showdatayangtai' class='yangtai-btn' data-id="3">3</button>
     </view>
     <view class='view-sub-1'>
         <button bindtap='showdatayangtai' class='yangtai-btn' data-id='4'>4</button>
@@ -13,18 +13,62 @@
         <button bindtap='showdatayangtai' class='yangtai-btn' data-id='6'>6</button>
     </view>
   </view>
-
-  <view class='navigator-btn' bindtap='changeshowstatedianshigui'>电视柜</view>
-      <view hidden='{{hiddenstatedianshigui}}'>
-      <view class='view-sub-1'>
-        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id="1">1</button>
-        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id="2">2</button>
-        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id="3">3</button>
+  <button class='navigator-btn' bindtap='changeshowstatedianshigui'>电视柜</button>
+  <view hidden='{{hiddenstatedianshigui}}'>
+    <view class='view-sub-top'>
+      <!-- 电视左侧的格子 -->
+      <view class='view-sub-left'>
+        <view class='view-sub-left-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="1">1</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="2">2</button>
+        </view>
+        <view class='view-sub-left-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="3">3</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="4">4</button>
+        </view>
+        <view class='view-sub-left-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="5">5</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="6">6</button>
+        </view>
+        <view class='view-sub-left-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="7">7</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="8">8</button>
+        </view>
+        <view class='view-sub-left-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="9">9</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-left' data-id="10">10</button>
+        </view>        
+      </view>
+      <!-- 电视右侧的格子 -->
+      <view class='view-sub-right'>
+        <view class='view-sub-right-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="11">11</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="12">12</button>
+        </view>
+        <view class='view-sub-right-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="13">13</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="14">14</button>
+        </view>
+        <view class='view-sub-right-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="15">15</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="16">16</button>
+        </view>
+        <view class='view-sub-right-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="17">17</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="18">18</button>
+        </view>
+        <view class='view-sub-right-1'>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="19">19</button>
+          <button bindtap='showdatadianshigui' class='dianshi-btn-right' data-id="20">20</button>
+        </view>
+      </view>
     </view>
-    <view class='view-sub-1'>
-        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id='4'>4</button>
-        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id='5'>5</button>
-        <button bindtap='showdatadianshigui' class='yangtai-btn' data-id='6'>6</button>
+    <!-- 电视下面的格子 -->
+    <view class='view-sub-bottom'>
+      <button bindtap='showdatadianshigui' class='dianshi-btn-bottom' data-id="21">21</button>
+      <button bindtap='showdatadianshigui' class='dianshi-btn-bottom' data-id="22">22</button>
+      <button bindtap='showdatadianshigui' class='dianshi-btn-bottom' data-id="23">23</button>
+      <button bindtap='showdatadianshigui' class='dianshi-btn-bottom' data-id="24">24</button>
     </view>
   </view>
 </view>

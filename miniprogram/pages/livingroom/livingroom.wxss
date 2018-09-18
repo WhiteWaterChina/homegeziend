@@ -1,10 +1,11 @@
 /* pages/livingroom/livingroom.wxss */
 .navigator-view {
+  position: relative;
+  left: 75rpx;
   margin-top: 150px;
-  width: 80%;
+  width: 600rpx;
   height: 200px;
   line-height: 48px;
-  margin-left: 35px;
 }
 .navigator-btn {
   color: #CC3300;
@@ -17,13 +18,43 @@
   flex-flow: row;
 }
 .yangtai-btn {
-  width: 30%;
+  width: 600rpx;
   height: 100px;
   border: 1px solid #d0d0d0;
 }
-.view-show {
-  display: block;
+.view-sub-top {
+  display: flex;
+  flex-flow: row;
+  width: 600rpx;
+  border: 1px solid red;
 }
-.view-hide {
-  display: none;
+.view-sub-left {
+  margin-left:5rpx;
+  width: 200rpx;
+}
+.view-sub-left-1 {
+  display: flex;
+  flex-flow: row;
+}
+.dianshi-btn-left {
+  width: 100rpx;
+}
+.view-sub-right {
+  margin-left: 195rpx;
+  width: 200rpx;
+}
+.view-sub-right-1 {
+  display: flex;
+  flex-flow: row;
+}
+.dianshi-btn-right {
+  width: 100rpx;
+}
+.view-sub-bottom {
+  display: flex;
+  flex-flow: row;
+  width: 600rpx;
+}
+.dianshi-btn-bottom {
+  width: 200rpx;
 }

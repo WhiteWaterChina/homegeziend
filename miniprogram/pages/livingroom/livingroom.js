@@ -34,8 +34,8 @@ Page({
   /*提交电视柜的位置信息给showdata来获取信息 */
   showdatadianshigui: function (event) {
     var idInfo = event.target.dataset.id
-    var postionMax = "keting"
-    var positionMin = "dianshigui" 
+    var postionMax = "客厅"
+    var positionMin = "电视柜" 
     wx.navigateTo({
       url: '../showdata/showdata?id=' + idInfo + '&positionMin=' + positionMin + '&positionMax=' + postionMax,
     })

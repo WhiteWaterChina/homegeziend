@@ -1,10 +1,12 @@
 <!--pages/showdata/showdata.wxml-->
+<!-- <block>
+<scroll-view style="height:400px;" scroll-y enable-back-to-top scroll-with-animation bindscrolltoupper="refresh"> -->
 <view class='class-title'>
-  <text class='class-title-text'>显示{{positionMax}}下的{{positionMin}}的格子</text>
-  <text>{{idInfo}}</text>
+  <text class='class-title-text'>显示{{positionMax}}里的{{positionMin}}的第{{idInfo}}号格子</text>
+  <image src='/images/plus.png' class='class-plus-image' bindtap='additem'></image>
 </view>
 
-<view>
+<view class='class-mainbody'>
   <view class='title'>
       <text class='class-index'>序号</text>
       <text class='image-index'>图片</text>
@@ -13,14 +15,18 @@
       <text class='text-position-line'>位置</text>
       <text class='image-reduce'>删除</text>
   </view>
-  <view class='class-line' wx:for="{{dataDetail}}" wx:key="{{index}}" wx:for-item="item">
-    <view id='{{index}}'>
-      <text class='class-index'>{{index}}</text>
-      <image class='image-index' src='/images/1.png'></image>
-      <text class='text-name-line'>{{item.name}}</text>
-      <text class='text-number'>{{item.number}}</text>
-      <text class='text-position-line'>{{positionMin}}</text>
-      <image class='image-reduce' src='/images/reduce.png'></image>
+  <view class='line-total'>
+    <view wx:for="{{dataDetail}}" wx:key="{{index}}" wx:for-item="item">
+      <view class='class-line' id='{{index}}'>
+        <text class='class-index'>{{index}}</text>
+        <image class='image-index' src='/images/1.png'></image>
+        <text class='text-name-line'>{{item.name}}</text>
+        <text class='text-number'>{{item.num}}</text>
+        <text class='text-position-line'>{{item.positionMin}}</text>
+        <image class='image-reduce' src='/images/reduce.png' bindtap='reduceItem' data-id='{{index}}'></image>
+      </view>
     </view>
   </view>
 </view>
+<!-- </scroll-view>
+</block> -->

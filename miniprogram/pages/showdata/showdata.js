@@ -5,8 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dataDetail:[]
+
   },
+  //刷新页面
+  refreshPage: function () {
+    var that = this
+    that.onShow()
+  },
+  //增加条目
+  additem: function (event) {
+    var that = this
+    var positionMax = that.data.positionMax
+    var positionMin = that.data.positionMin
+    var idInfo = that.data.idInfo
+    wx.navigateTo({
+      url: '../adddata/adddata?positionMax='+positionMax+'&positionMin='+positionMin+'&id='+idInfo,
+    })
+  },
+  //删除条目
+  reduceItem: function (event) {
+    var that = this
+    var idInfo = event.target.dataset.id
+    var positionMax = that.data.positionMax
+    var positionMin = that.data.positionMin
+    var delItemId = that.data.dataDetail[parseInt(idInfo)]["_id"]
+    console.log(delItemId)
+    const db = wx.cloud.database('homespace')
+    db.collection('homegezi').doc(delItemId).remove({
+      success: console.log,
+      fail: console.error
+    })
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -14,22 +44,7 @@ Page({
     var positionMax = options.positionMax
     var positionMin = options.positionMin
     var idInfo = options.id
-  
-    const db = wx.cloud.database('homespace')
-    db.collection('homegezi').where({
-      positionMax: positionMax,
-      positionMin: positionMin,
-      id: parseInt(idInfo)
-    }).get({
-      success: function (res) {
-        // res.data 是包含以上定义的两条记录的数组
-        this.setData({
-          'dataDetail': res.data
-        })
-      }
-    })
-
-
+    var that = this
     this.setData({
       'positionMax': positionMax,
       'positionMin': positionMin,
@@ -48,7 +63,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    var positionMax = that.data.positionMax
+    var positionMin = that.data.positionMin
+    var idInfo = that.data.idInfo
+    const db = wx.cloud.database('homespace')
+    db.collection('homegezi').where({
+      positionMax: positionMax,
+      positionMin: positionMin,
+      id: parseInt(idInfo)
+    }).get({
+      success: function (res) {
+        console.log(res)
+        // res.data 是包含以上定义的两条记录的数组
+        that.setData({
+          'dataDetail': res.data
+        })
+      }
+    })
   },
 
   /**
@@ -69,7 +101,27 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    var that = this
+    var positionMax = that.data.positionMax
+    var positionMin = that.data.positionMin
+    var idInfo = that.data.idInfo
+    const db = wx.cloud.database('homespace')
+    db.collection('homegezi').where({
+      positionMax: positionMax,
+      positionMin: positionMin,
+      id: parseInt(idInfo)
+    }).get({
+      success: function (res) {
+        that.setData({
+          'dataDetail': res.data
+        })
+      }
+    })
+    this.setData({
+      'positionMax': positionMax,
+      'positionMin': positionMin,
+      'idInfo': idInfo
+    })
   },
 
   /**
