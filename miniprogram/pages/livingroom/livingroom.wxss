@@ -26,7 +26,6 @@
   display: flex;
   flex-flow: row;
   width: 600rpx;
-  border: 1px solid red;
 }
 .view-sub-left {
   margin-left:5rpx;

@@ -1,13 +1,11 @@
 <!--pages/showdata/showdata.wxml-->
-<!-- <block>
-<scroll-view style="height:400px;" scroll-y enable-back-to-top scroll-with-animation bindscrolltoupper="refresh"> -->
 <view class='class-title'>
   <text class='class-title-text'>显示{{positionMax}}里的{{positionMin}}的第{{idInfo}}号格子</text>
   <image src='/images/plus.png' class='class-plus-image' bindtap='additem'></image>
 </view>
 
 <view class='class-mainbody'>
-  <view class='title'>
+  <view class='title-mainbody'>
       <text class='class-index'>序号</text>
       <text class='image-index'>图片</text>
       <text class='text-name-line'>名称</text>
@@ -17,10 +15,10 @@
   </view>
   <view class='line-total'>
     <view wx:for="{{dataDetail}}" wx:key="{{index}}" wx:for-item="item">
-      <view class='class-line' id='{{index}}'>
+      <view class='class-line' data-id='{{index}}'>
         <text class='class-index'>{{index}}</text>
         <image class='image-index' src='/images/1.png'></image>
-        <text class='text-name-line'>{{item.name}}</text>
+        <text class='text-name-line' bindtap='showdetail' data-id='{{index}}'>{{item.name}}</text>
         <text class='text-number'>{{item.num}}</text>
         <text class='text-position-line'>{{item.positionMin}}</text>
         <image class='image-reduce' src='/images/reduce.png' bindtap='reduceItem' data-id='{{index}}'></image>
@@ -28,5 +26,3 @@
     </view>
   </view>
 </view>
-<!-- </scroll-view>
-</block> -->

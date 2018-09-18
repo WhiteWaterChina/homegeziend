@@ -1,0 +1,17 @@
+/* pages/adddata/adddata.wxss */
+.class-line {
+  display: flex;
+  flex-flow: column;
+}
+.class-readonly {
+  color: #33FF33;
+}
+.class-item-title {
+  color: red;
+}
+.class-input-name {
+  width: 100%;
+}
+.class-input-num {
+  width: 100%;
+}

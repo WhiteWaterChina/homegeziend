@@ -36,6 +36,20 @@ Page({
       fail: console.error
     })
   },
+  // 点击名称显示此条目的详细信息
+  showdetail: function (event) {
+    var that = this
+    var idInfo = event.target.dataset.id
+    var name = that.data.dataDetail[parseInt(idInfo)]["name"]
+    var num = that.data.dataDetail[parseInt(idInfo)]["num"]
+    var positionMax = that.data.dataDetail[parseInt(idInfo)]["positionMax"]
+    var positionMin = that.data.dataDetail[parseInt(idInfo)]["positionMin"]
+    var geziId = that.data.dataDetail[parseInt(idInfo)]["id"]
+
+    wx.navigateTo({
+      url: '../showdetail/showdetail?name='+name+'&num='+num+'&positionMax='positionMax+'&positionMin='positionMin+'&geziID='+geziId,
+    })
+  },
   
   /**
    * 生命周期函数--监听页面加载

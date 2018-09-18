@@ -13,7 +13,8 @@
     "pages/secondbedroom/secondbedroom",
     "pages/search/search",
     "pages/showdata/showdata",
-    "pages/adddata/adddata"
+    "pages/adddata/adddata",
+    "pages/showdetail/showdetail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
