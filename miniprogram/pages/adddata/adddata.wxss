@@ -15,3 +15,7 @@
 .class-input-num {
   width: 100%;
 }
+.class-upload-image {
+  width: 100%;
+  color: blue;
+}

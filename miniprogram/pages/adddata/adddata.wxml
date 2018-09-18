@@ -2,11 +2,15 @@
 <view class='mainbody'>
   <view class='class-line'>
     <text class='class-item-title'>名称:</text>
-    <input name='inputName' class='class-input-name' placeholder='请在此输入物品的名称' confirm-type='next' bindinput='nameInput' value='{{nameInputValue}}'></input>
+    <input name='inputName' class='class-input-name' placeholder='请在此输入物品的名称' bindinput='nameInput' value='{{nameInputValue}}'></input>
   </view>
   <view class='class-line'>
     <text class='class-item-title'>数量:</text>
-    <input name='inputNum' class='class-input-num' placeholder='请在此输入物品的数量' confirm-type='next' bindinput='numInput' value='{{numInputValue}}'></input>
+    <input name='inputNum' type='number' class='class-input-num' placeholder='请在此输入物品的数量' bindinput='numInput' value='{{numInputValue}}'></input>
+  </view>
+  <view class='class-line'>
+    <text class='class-item-title'>图片:</text>
+    <button name='imagepath' class='class-upload-image' bindtap='uploadimage'>请选择此物品的图片</button>
   </view>
   <view class='class-line'>
     <text class='class-item-title'>所在大位置:</text>

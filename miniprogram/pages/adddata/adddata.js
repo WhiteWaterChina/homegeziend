@@ -19,6 +19,60 @@ Page({
       numInputValue: event.detail.value
   })
   },
+  //上传物品的图片
+  uploadimage: function (event) {
+    var that = this
+    var positionMax = that.data.positionMax
+    var positionMin = that.data.positionMin
+    var idInfo = that.data.idInfo
+
+    if (typeof (that.data.nameInputValue) == 'undefined' || typeof (that.data.nameInputValue) == 'undefined' ) {
+      wx.showToast({
+      icon: 'none',
+      title: '请先输入物品名称和数量！',
+      })
+    }
+    else {
+      var name = that.data.nameInputValue
+      var num = that.data.nameInputValue 
+      wx.chooseImage({
+        count: 1,
+        sizeType: ['original','compressed'],
+        sourceType: ['album', 'camera'],
+        success: function (res) {
+          wx.showLoading({
+            title: '上传中',
+          })
+          console.log(res)
+          const filePath = res.tempFilePaths[0]
+          // 上传图片
+          const cloudPath = 'image-'+positionMax+'-'+positionMin+'-'+idInfo+'-'+name+'-'+num+filePath.match(/\.[^.]+?$/)[0]
+          console.log(cloudPath)
+          wx.cloud.uploadFile({
+            cloudPath,
+            filePath,
+            success: res => {
+              console.log('[上传文件] 成功：', res)
+              app.globalData.fileID = res.fileID
+            },
+            fail: e => {
+              console.error('[上传文件] 失败：', e)
+              wx.showToast({
+                icon: 'none',
+                title: '上传失败',
+              })
+            },
+            complete: () => {
+              wx.hideLoading()
+            }
+          })
+        },
+        fail: e => {
+          console.error(e)
+        }
+      })
+    }
+  },
   //提交信息
   btnConfirm: function (event) {
     var that = this

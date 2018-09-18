@@ -12,7 +12,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var name = options.name
+    var num = options.num
+    var positionMax = options.positionMax
+    var positionMin = options.positionMin
+    var idInfo = options.geziId
+    that.setData({
+      'nameValue': name,
+      'numValue':num,
+      'positionMax':positionMax,
+      'positionMin':positionMin,
+      'idInfo':idInfo
+    })
   },
 
   /**

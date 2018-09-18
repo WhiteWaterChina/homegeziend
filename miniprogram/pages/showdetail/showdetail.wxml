@@ -1,2 +1,23 @@
 <!--pages/showdetail/showdetail.wxml-->
-<text>pages/showdetail/showdetail.wxml</text>
+<view>
+  <view>
+    <text class='line-title'>名称:</text>
+    <text>{{nameValue}}</text>
+  </view>
+  <view>
+    <text class='line-title'>数量:</text>
+    <text>{{numValue}}</text>
+  </view>
+  <view>
+    <text class='line-title'>大位置:</text>
+    <text>{{positionMax}}</text>
+  </view>
+  <view>
+    <text class='line-title'>小位置:</text>
+    <text>{{positionMin}}</text>
+  </view>
+  <view>
+    <text class='line-title'>格子数:</text>
+    <text>{{idInfo}}</text>
+  </view>
+</view>

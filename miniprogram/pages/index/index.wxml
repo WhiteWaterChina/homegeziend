@@ -1,6 +1,6 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
+<view class="container-top" >
+  <view class="showinfo">
     <text class="userinfo-nickname">HELLO {{userInfo.nickName}}!WELCOME TO 我的格子~</text>
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
   </view>
@@ -14,5 +14,8 @@
     </view>
     <view class='sousuo'>搜索</view>
   </view>
-  
 </view>
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" >登陆</button>
+</view>
+
