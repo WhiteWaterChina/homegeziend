@@ -78,7 +78,7 @@ Page({
     var positionMin = options.positionMin
     var idInfo = options.geziId
     var itemId = options.itemId
-    var imagelocal = '/images/' + positionMax + '-' + positionMin + '.JPG'
+    var imagelocal = '/images/' + positionMax + '-' + positionMin + '.png'
     that.setData({
       'nameValue': name,
       'numValue':num,
