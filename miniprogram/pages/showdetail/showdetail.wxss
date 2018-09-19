@@ -2,3 +2,7 @@
 .line-title {
   color: red;
 }
+.class-line-image {
+  display: flex;
+  flex-flow: column;
+}

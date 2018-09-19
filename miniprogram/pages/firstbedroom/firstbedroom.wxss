@@ -1,21 +1,92 @@
 /**index.wxss**/
-.userinfo {
+.navigator-view {
+  margin-top: 150px;
+  width: 700rpx;
+  margin-left: 25rpx;
+}
+.navigator-btn {
+  color: #CC3300;
+  background-color: #33FFFF; 
+  text-align: center;
+  border: 1px solid #d0d0d0;
+}
+/* 门口柜 */
+.view-main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.view-1 {
+  display: flex;
+  flex-flow: row;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.menkougui-btn-type1 {
+  width: 250rpx;
+  height: 50px;
 }
-
-.usermotto {
-  margin-top: 200px;
+.menkougui-btn-type2 {
+  width: 450rpx;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.view-2 {
+  display: flex;
+  flex-flow: row;
+}
+.menkougui-btn-type3 {
+  width: 250rpx;
+  height: 50px;
+}
+.menkougui-btn-type4 {
+  width: 450rpx;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}
+.menkougui-btn-type5 {
+  width: 450rpx;
+  height: 50px;
+}
+/* 主柜 */
+.view-main-2 {
+  display: flex;
+  flex-flow: column;
+}
+.view-11 {
+  display: flex;
+  flex-flow: row;
+}
+.view-12 {
+  display: flex;
+  flex-flow: row;
+}
+.zhugui-btn-type1 {
+  width: 350rpx;
+  height: 50px;
+}
+.zhugui-btn-type2 {
+  width: 350rpx;
+  height: 50px;
+}
+.zhugui-btn-type3 {
+  width: 175rpx;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.zhugui-btn-type4 {
+  width: 175rpx;
+  height: 50px;
+}
+.zhugui-btn-type5 {
+  width: 175rpx;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.zhugui-btn-type6 {
+  width: 175rpx;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
 }

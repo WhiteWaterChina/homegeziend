@@ -10,7 +10,7 @@
   </view>
   <view class='class-line-image'>
     <text class='line-title'>图片预览:</text>
-    <image name='imagepath' class='line-image' bindtap='previewImage' src='{{imageId}}' data-src='{{imageId}}'mode='aspectFit'></image>
+    <image name='imagepath' class='line-image' bindtap='previewImage' src='{{imageId}}' data-src='{{imageId}} 'mode='aspectFit'></image>
   </view>
   <view>
     <text class='line-title'>大位置:</text>
@@ -23,6 +23,10 @@
   <view>
     <text class='line-title'>格子数:</text>
     <text>{{idInfo}}</text>
+  </view>
+  <view class='class-line-image'>
+    <text class='line-title'>位置示意图:</text>
+    <image name='imagelocal' class='line-image' bindtap='previewImageLocal' src='{{imagelocal}}' data-src='{{imagelocal}}' mode='aspectFit'></image>
   </view>
   <text hidden='true'>{{itemId}}</text>
   <button bindtap='delitem'>删除</button>

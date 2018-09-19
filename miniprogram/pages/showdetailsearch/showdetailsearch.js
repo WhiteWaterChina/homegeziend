@@ -9,15 +9,16 @@ Page({
   },
   //删除此条目
   delitem: function (event) {
+    var that = this
     wx.showModal({
       title: '确认',
       content: '确定删除此条目？',
       success: function (res) {
         if (res.confirm) {
-          var that = this
           var itemId = that.data.itemId
           var imageId = that.data.imageId
           //删除数据库的数据
+          const db = wx.cloud.database('homespace')
           db.collection('homegezi').doc(itemId).remove({
             success: function (res) {
               //删除对应的图片
@@ -45,11 +46,21 @@ Page({
       }
     })  
   },
-  //图片缩略图到原图显示
+  //物品图片缩略图到原图显示
   previewImage: function (event) {
     var that = this
     var current = event.target.dataset.src
     var fileLocalPathList = [that.data.imageId]
+    wx.previewImage({
+      current: current,
+      urls: fileLocalPathList
+    })
+  },
+  //物品位置图片缩略图到原图显示
+  previewImageLocal: function (event) {
+    var that = this
+    var current = event.target.dataset.src
+    var fileLocalPathList = [that.data.imagelocal]
     wx.previewImage({
       current: current,
       urls: fileLocalPathList
@@ -67,6 +78,7 @@ Page({
     var positionMin = options.positionMin
     var idInfo = options.geziId
     var itemId = options.itemId
+    var imagelocal = '/images/' + positionMax + '-' + positionMin + '.JPG'
     that.setData({
       'nameValue': name,
       'numValue':num,
@@ -74,7 +86,8 @@ Page({
       'positionMax':positionMax,
       'positionMin':positionMin,
       'idInfo':idInfo,
-      'itemId': itemId
+      'itemId': itemId,
+      'imagelocal': imagelocal
     })
   },
   /**

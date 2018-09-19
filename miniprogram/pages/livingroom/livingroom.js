@@ -6,13 +6,21 @@ Page({
    */
   data: {
     hiddenstateyangtai: true,
-    hiddenstatedianshigui:true
+    hiddenstatedianshigui:true,
+    hiddenstatetatami:true
   },
 /*单击改变阳台的格子的显示和隐藏 */
   changeshowstateyangtai: function(event) {
     var that = this
     that.setData({
       hiddenstateyangtai: (!that.data.hiddenstateyangtai)
+    })
+  },
+  /*单击改变阳台榻榻米的格子的显示和隐藏 */
+  changeshowstatetatami: function (event) {
+    var that = this
+    that.setData({
+      hiddenstatetatami: (!that.data.hiddenstatetatami)
     })
   },
   /*单击改变电视柜的格子的显示和隐藏 */
@@ -26,7 +34,16 @@ Page({
   showdatayangtai: function (event) {
     var idInfo = event.target.dataset.id
     var positionMax = "客厅"
-    var positionMin = "阳台"
+    var positionMin = "阳台竖柜"
+    wx.navigateTo({
+      url: '../showdata/showdata?id=' + idInfo + '&positionMin=' + positionMin + '&positionMax=' + positionMax,
+    })
+  },
+  /*提交阳台的位置数据给showdata来获取信息 */
+  showdatatatami: function (event) {
+    var idInfo = event.target.dataset.id
+    var positionMax = "客厅"
+    var positionMin = "榻榻米"
     wx.navigateTo({
       url: '../showdata/showdata?id=' + idInfo + '&positionMin=' + positionMin + '&positionMax=' + positionMax,
     })
@@ -44,7 +61,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    showView: false
   },
 
   /**

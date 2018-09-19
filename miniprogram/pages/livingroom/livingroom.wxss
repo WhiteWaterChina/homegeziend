@@ -1,11 +1,11 @@
 /* pages/livingroom/livingroom.wxss */
 .navigator-view {
   position: relative;
-  left: 75rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
   margin-top: 150px;
-  width: 600rpx;
-  height: 200px;
-  line-height: 48px;
+  width: 700rpx;
+
 }
 .navigator-btn {
   color: #CC3300;
@@ -13,19 +13,39 @@
   text-align: center;
   border: 1px solid #d0d0d0;
 }
-.view-sub-1 {
+/* 阳台竖柜 */
+.main-yangtai {
   display: flex;
   flex-flow: row;
 }
-.yangtai-btn {
-  width: 600rpx;
-  height: 100px;
+.yangtai-data {
+  width: 650rpx;
+  display: flex;
+  flex-flow: column;
+}
+.yangtai-window {
+  width: 50rpx;
   border: 1px solid #d0d0d0;
+  color: red;
+  text-align: center;
+  height: 150px;
+}
+.view-sub-1 {
+  display: flex;
+  flex-flow: row;
+  width: 650rpx;
+}
+.yangtai-btn {
+  width: 250rpx;
+  height: 80px;
+  border: 1px solid #d0d0d0;
+  line-height: 80px;
+  text-align: center;
 }
 .view-sub-top {
   display: flex;
   flex-flow: row;
-  width: 600rpx;
+  width: 700rpx;
 }
 .view-sub-left {
   margin-left:5rpx;
@@ -39,7 +59,7 @@
   width: 100rpx;
 }
 .view-sub-right {
-  margin-left: 195rpx;
+  margin-left: 300rpx;
   width: 200rpx;
 }
 .view-sub-right-1 {
@@ -52,8 +72,27 @@
 .view-sub-bottom {
   display: flex;
   flex-flow: row;
-  width: 600rpx;
+  width: 700rpx;
 }
 .dianshi-btn-bottom {
   width: 200rpx;
+}
+/* 阳台榻榻米 */
+.view-sub-tatami {
+  display: flex;
+  flex-flow: row;
+}
+.tatami-btn {
+  width: 600rpx;
+  height: 100px;
+  border: 1px solid #d0d0d0;
+  line-height: 100px;
+  text-align: center;
+}
+.position {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #d0d0d0;
+  color: red;
 }

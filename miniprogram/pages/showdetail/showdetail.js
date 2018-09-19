@@ -7,11 +7,21 @@ Page({
   data: {
 
   },
-  //图片缩略图到原图显示
+  //图片物品缩略图到原图显示
   previewImage: function (event) {
     var that = this
     var current = event.target.dataset.src
     var fileLocalPathList = [that.data.imageId]
+    wx.previewImage({
+      current: current,
+      urls: fileLocalPathList
+    })
+  },
+  //图片位置缩略图到原图显示
+  previewImageLocal: function (event) {
+    var that = this
+    var current = event.target.dataset.src
+    var fileLocalPathList = [that.data.imagelocal]
     wx.previewImage({
       current: current,
       urls: fileLocalPathList
@@ -28,13 +38,15 @@ Page({
     var positionMax = options.positionMax
     var positionMin = options.positionMin
     var idInfo = options.geziId
+    var imagelocal = '/images/' + positionMax +'-'+positionMin+'.JPG'
     that.setData({
       'nameValue': name,
       'numValue':num,
       'imageId':imageId,
       'positionMax':positionMax,
       'positionMin':positionMin,
-      'idInfo':idInfo
+      'idInfo':idInfo,
+      'imagelocal': imagelocal
     })
   },
   /**

@@ -1,20 +1,45 @@
 <!--pages/livingroom/livingroom.wxml-->
 <view class='navigator-view'>
-  <button class='navigator-btn' bindtap='changeshowstateyangtai'>阳台</button>
+  <button class='navigator-btn' bindtap='changeshowstateyangtai'>阳台竖柜</button>
   <view hidden='{{hiddenstateyangtai}}'>
-    <view class='view-sub-1'>
-      <button bindtap='showdatayangtai' class='yangtai-btn' data-id="1">1</button>
-      <button bindtap='showdatayangtai' class='yangtai-btn' data-id="2">2</button>
-      <button bindtap='showdatayangtai' class='yangtai-btn' data-id="3">3</button>
+  <!-- 阳台竖柜 -->
+    <view class='main-yangtai'>
+      <view class='yangtai-data'>
+        <view class='view-sub-1'>
+          <button bindtap='showdatayangtai' class='yangtai-btn' data-id="1">1</button>
+          <button bindtap='showdatayangtai' class='yangtai-btn' data-id="2">2</button>
+          <button bindtap='showdatayangtai' class='yangtai-btn' data-id="3">3</button>
+        </view>
+        <view class='view-sub-1'>
+            <button bindtap='showdatayangtai' class='yangtai-btn' data-id='4'>4</button>
+            <button bindtap='showdatayangtai' class='yangtai-btn' data-id='5'>5</button>
+            <button bindtap='showdatayangtai' class='yangtai-btn' data-id='6'>6</button>
+        </view>
+      </view>
+      <view class='yangtai-window'>窗户</view>
     </view>
-    <view class='view-sub-1'>
-        <button bindtap='showdatayangtai' class='yangtai-btn' data-id='4'>4</button>
-        <button bindtap='showdatayangtai' class='yangtai-btn' data-id='5'>5</button>
-        <button bindtap='showdatayangtai' class='yangtai-btn' data-id='6'>6</button>
+  </view>
+
+  <button class='navigator-btn' bindtap='changeshowstatetatami'>榻榻米</button>
+  <view hidden='{{hiddenstatetatami}}'>
+    <view class='position'>窗户</view>
+    <!-- 榻榻米 -->
+    <view class='view-sub-tatami'>
+      <button bindtap='showdatatatami' class='tatami-btn' data-id="1">1</button>
+      <button bindtap='showdatatatami' class='tatami-btn' data-id="2">2</button>
+      <button bindtap='showdatatatami' class='tatami-btn' data-id="3">3</button>
+      <button bindtap='showdatatatami' class='tatami-btn' data-id='4'>4</button>
+    </view>
+    <view class='view-sub-tatami'>
+        <button bindtap='showdatatatami' class='tatami-btn' data-id='5'>5</button>
+        <button bindtap='showdatatatami' class='tatami-btn' data-id='6'>6</button>
+        <button bindtap='showdatatatami' class='tatami-btn' data-id='7'>7</button>
+        <button bindtap='showdatatatami' class='tatami-btn' data-id='8'>8</button>        
     </view>
   </view>
   <button class='navigator-btn' bindtap='changeshowstatedianshigui'>电视柜</button>
   <view hidden='{{hiddenstatedianshigui}}'>
+  <!-- 电视柜 -->
     <view class='view-sub-top'>
       <!-- 电视左侧的格子 -->
       <view class='view-sub-left'>
