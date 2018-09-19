@@ -11,6 +11,11 @@
   <view class='class-line'>
     <text class='class-item-title'>图片:</text>
     <button name='imagepath' class='class-upload-image' bindtap='uploadimage'>请选择此物品的图片</button>
+    <text hidden='true'>{{imagePathLocal}}</text>
+  </view>
+  <view class='class-line'>
+    <text class='class-item-title'>图片预览:</text>
+    <image name='imagepath' class='class-show-image' bindtap='previewImage' src='{{imagePathLocal}}' data-src='{{imagePathLocal}}'mode='aspectFit'></image>
   </view>
   <view class='class-line'>
     <text class='class-item-title'>所在大位置:</text>

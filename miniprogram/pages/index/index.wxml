@@ -1,18 +1,18 @@
 <!--index.wxml-->
-<view class="container-top" >
+<view class="container-top" wx:if="{{hasUserInfo}}">
   <view class="showinfo">
     <text class="userinfo-nickname">HELLO {{userInfo.nickName}}!WELCOME TO 我的格子~</text>
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
   </view>
 <!--搜索框-->  
-  <view class='page_row' bindtap="search">
+  <view class='page_row' >
     <view class="search">
       <view class="df search_arr">
         <icon class="searchcion" size='20' type='search'></icon>
-        <input class="" disabled placeholder="请输入关键字"/>
+        <input class='input-text' placeholder="请输入物品名称关键字" value='{{searchKey}}' bindinput='inputkey'></input>
       </view>
     </view>
-    <view class='sousuo'>搜索</view>
+    <view class='sousuo' bindtap="search">搜索</view>
   </view>
 </view>
 <view class="userinfo">

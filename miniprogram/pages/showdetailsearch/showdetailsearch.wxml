@@ -8,9 +8,9 @@
     <text class='line-title'>数量:</text>
     <text>{{numValue}}</text>
   </view>
-  <view class='class-line'>
+  <view class='class-line-image'>
     <text class='line-title'>图片预览:</text>
-    <image name='imagepath' class='line-title' bindtap='previewImage' src='{{imageId}}' data-src='{{imageId}}'mode='aspectFit'></image>
+    <image name='imagepath' class='line-image' bindtap='previewImage' src='{{imageId}}' data-src='{{imageId}}'mode='aspectFit'></image>
   </view>
   <view>
     <text class='line-title'>大位置:</text>
@@ -24,4 +24,6 @@
     <text class='line-title'>格子数:</text>
     <text>{{idInfo}}</text>
   </view>
+  <text hidden='true'>{{itemId}}</text>
+  <button bindtap='delitem'>删除</button>
 </view>

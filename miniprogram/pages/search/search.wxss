@@ -1,1 +1,175 @@
 /* pages/search/search.wxss */
+/*顶部搜索框*/
+.search{
+  width: 80%;
+}
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.search_arr input{
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+.bc_text {
+  line-height: 68rpx;
+  height: 68rpx;
+  margin-top: 34rpx;
+}
+.sousuo {
+  margin-left: 15rpx;
+  width: 17%;
+  line-height: 150%;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+}
+.page_row{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left:25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.mainbody {
+  margin-top: 30px;
+  width: 100%;
+}
+.mainbody-title {
+  height: 20px;
+
+}
+/*显示搜索数据的框体*/
+.index-title {
+  width: 40rpx;
+  height: 30px;
+  text-align: center;
+}
+.image-title {
+  width: 100rpx;
+  height: 30px;
+  text-align: center;
+  position: relative;
+  left: 20rpx;
+}
+.text-name-title {
+  text-align: center;
+  position: relative;
+  left: 50rpx;
+  width: 150rpx;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-number-title {
+  text-align: center;
+  position: relative;
+  left: 80rpx;
+  width: 40rpx;
+  height: 28px;
+}
+.text-position-max-title {
+  text-align: center;
+  width: 150rpx;
+  height: 30px;
+  position: relative;
+  left: 100rpx;
+
+}
+.text-position-min-title {
+  text-align: center;
+  width: 150rpx;
+  height: 30px;
+  position: relative;
+  left: 105rpx;
+}
+.text-position-id-title {
+  text-align: center;
+  width: 150rpx;
+  height: 30px;
+  position: relative;
+  left: 110rpx;
+}
+/*显示详细信息*/
+.mainbody-line {
+  margin-top: 10px;
+}
+.class-line {
+  height: 30px; 
+  border: 1px solid #d0d0d0;
+  display: flex;
+  flex-flow: row;
+}
+.index-body {
+  width: 40rpx;
+  height: 30px;
+  text-align: center;
+}
+.image-body {
+  width: 100rpx;
+  height: 30px;
+  text-align: center;
+  position: relative;
+  left: 40rpx;
+}
+.text-name-body {
+  text-align: center;
+  position: relative;
+  left: 50rpx;
+  width: 100rpx;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-number-body {
+  text-align: center;
+  position: relative;
+  left: 75rpx;
+  width: 40rpx;
+  height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-position-max-body {
+  text-align: center;
+  width: 100rpx;
+  height: 30px;
+  position: relative;
+  left: 120rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-position-min-body {
+  text-align: center;
+  width: 100rpx;
+  height: 30px;
+  position: relative;
+  left: 135rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-position-id-body {
+  text-align: center;
+  width: 60rpx;
+  height: 30px;
+  position: relative;
+  left: 160rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}

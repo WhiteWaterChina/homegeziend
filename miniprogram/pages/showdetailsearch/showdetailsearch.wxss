@@ -1,0 +1,11 @@
+/* pages/showdetail/showdetail.wxss */
+.line-title {
+  color: red;
+}
+.class-line-image {
+  display: flex;
+  flex-flow: column;
+}
+.line-image {
+  width: 100%;
+}

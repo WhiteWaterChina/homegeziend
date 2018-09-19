@@ -1,6 +1,38 @@
 <!--pages/search/search.wxml-->
-<view class='text-title'>
-  <text>当前格子所在的位置:{{position}}</text>
+<!--搜索框-->  
+<view class='page_row' >
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input class='' placeholder="请输入物品名称关键字" value='{{searchKey}}' bindinput='inputkey'></input>
+    </view>
+  </view>
+  <view class='sousuo' bindtap="search">搜索</view>
 </view>
 
+<!-- <搜索结果显示框 -->
+<view class='mainbody'>
+  <view class='mainbody-title'>
+  <text class='index-title'>序号</text>
+  <text class='image-title'>图片</text>
+  <text class='text-name-title'>名称</text>
+  <text class='text-number-title'>数量</text>
+  <text class='text-position-max-title'>大位置</text>
+  <text class='text-position-min-title'>小位置</text>
+  <text class='text-position-id-title'>格子</text>
+  </view>
+  <view class='mainbody-line'>
+    <view wx:for="{{dataDetail}}" wx:key="{{index}}" wx:for-item="item">
+      <view class='class-line' data-id='{{index}}'>
+        <text class='index-body'>{{index}}</text>
+        <image class='image-body' src='{{item.imageId}}' data-src='{{item.imageId}}' data-id='{{index}}' mode='aspectFit' bindtap='previewImage'></image>
+        <text class='text-name-body' bindtap='showdetail' data-id='{{index}}'>{{item.name}}</text>
+        <text class='text-number-body'>{{item.num}}</text>
+        <text class='text-position-max-body'>{{item.positionMax}}</text>
+        <text class='text-position-min-body'>{{item.positionMin}}</text>
+        <text class='text-position-id-body'>{{item.id}}</text>
+      </view>
+    </view>
+  </view>
+</view>
 

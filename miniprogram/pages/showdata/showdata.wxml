@@ -6,22 +6,22 @@
 
 <view class='class-mainbody'>
   <view class='title-mainbody'>
-      <text class='class-index'>序号</text>
-      <text class='image-index'>图片</text>
-      <text class='text-name-line'>名称</text>
+      <text class='index-title'>序号</text>
+      <text class='image-title'>图片</text>
+      <text class='text-name-title'>名称</text>
       <text class='text-number-title'>数量</text>
-      <text class='text-position-line'>位置</text>
-      <text class='image-reduce'>删除</text>
+      <text class='text-position-title'>位置</text>
+      <text class='image-reduce-title'>删除</text>
   </view>
   <view class='line-total'>
     <view wx:for="{{dataDetail}}" wx:key="{{index}}" wx:for-item="item">
       <view class='class-line' data-id='{{index}}'>
-        <text class='class-index'>{{index}}</text>
-        <image class='image-index' src='/images/1.png'></image>
-        <text class='text-name-line' bindtap='showdetail' data-id='{{index}}'>{{item.name}}</text>
-        <text class='text-number'>{{item.num}}</text>
-        <text class='text-position-line'>{{item.positionMin}}</text>
-        <image class='image-reduce' src='/images/reduce.png' bindtap='reduceItem' data-id='{{index}}'></image>
+        <text class='index-body'>{{index}}</text>
+        <image class='image-body' src='{{item.imageId}}' data-src='{{item.imageId}}' data-id='{{index}}' mode='aspectFit' bindtap='previewImage'></image>
+        <text class='text-name-body' bindtap='showdetail' data-id='{{index}}'>{{item.name}}</text>
+        <text class='text-number-body'>{{item.num}}</text>
+        <text class='text-position-body'>{{item.positionMin}}</text>
+        <image class='image-reduce-body' src='/images/reduce.png' bindtap='reduceItem' data-id='{{index}}'></image>
       </view>
     </view>
   </view>

@@ -16,7 +16,6 @@
 }
 .title-mainbody {
   height: 20px;
-
 }
 .line-total {
   margin-top: 30px;
@@ -29,21 +28,21 @@
 }
 .class-line-left {
   border: 1px solid green;
-
 }
-.class-index {
+/* 标题行 */
+.index-title {
   width: 40rpx;
   height: 30px;
   text-align: center;
 }
-.image-index {
+.image-title {
   width: 100rpx;
   height: 30px;
   text-align: center;
   position: fixed;
   left: 85rpx;
 }
-.text-name-line {
+.text-name-title {
   text-align: center;
   position: fixed;
   left: 200rpx;
@@ -67,14 +66,58 @@
   width: 40rpx;
   height: 30px;
 }
-.text-position-line {
+.text-position-title {
   text-align: center;
   width: 150rpx;
   height: 30px;
   position: fixed;
   right: 110rpx;
 }
-.image-reduce {
+.image-reduce-title {
+  width: 80rpx;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  right: 10rpx;
+  }
+  /* 具体数据 */
+  .index-body {
+  width: 40rpx;
+  height: 30px;
+  text-align: center;
+}
+.image-body {
+  width: 100rpx;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  left: 85rpx;
+}
+.text-name-body {
+  text-align: center;
+  position: fixed;
+  left: 200rpx;
+  width: 150rpx;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-number-body {
+  text-align: left;
+  position: relative;
+  left: 400rpx;
+  width: 40rpx;
+  height: 30px;
+}
+.text-position-body {
+  text-align: center;
+  width: 150rpx;
+  height: 30px;
+  position: fixed;
+  right: 110rpx;
+}
+.image-reduce-body {
   width: 80rpx;
   height: 30px;
   text-align: center;

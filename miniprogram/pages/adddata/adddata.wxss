@@ -19,3 +19,7 @@
   width: 100%;
   color: blue;
 }
+.class-show-image {
+  width: 100%;
+  height: 100px;
+}

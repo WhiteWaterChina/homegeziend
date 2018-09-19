@@ -7,11 +7,6 @@ Page({
   data: {
 
   },
-  //刷新页面
-  refreshPage: function () {
-    var that = this
-    that.onShow()
-  },
   //增加条目
   additem: function (event) {
     var that = this
@@ -25,20 +20,56 @@ Page({
   //删除条目
   reduceItem: function (event) {
     var that = this
-    var idInfo = event.target.dataset.id
-    var positionMax = that.data.positionMax
-    var positionMin = that.data.positionMin
-    var delItemId = that.data.dataDetail[parseInt(idInfo)]["_id"]
-    const db = wx.cloud.database('homespace')
-    db.collection('homegezi').doc(delItemId).remove({
+    wx.showModal({
+      title: '确认',
+      content: '确认删除此条目？',
       success: function (res) {
-        var dataDetailTemp = that.data.dataDetail
-        dataDetailTemp.splice(parseInt(idInfo),1)
-        that.setData({
-          'dataDetail': dataDetailTemp
-        })
-      },
-      fail: console.error
+        if (res.confirm) {
+          var idInfo = event.target.dataset.id
+          var positionMax = that.data.positionMax
+          var positionMin = that.data.positionMin
+          var delItemId = that.data.dataDetail[parseInt(idInfo)]["_id"]
+          const db = wx.cloud.database('homespace')
+          //删除数据库的数据
+          db.collection('homegezi').doc(delItemId).remove({
+            success: function (res) {
+              //删除对应的图片
+              wx.cloud.deleteFile({
+                fileList: [that.data.dataDetail[parseInt(idInfo)]["imageId"]],
+                success: function (event) {
+                  wx.showToast({
+                    title: '删除成功！',
+                    icon: "success",
+                    mask: true
+                  })
+                },
+                fail: function (event) {
+
+                },
+              })
+              var dataDetailTemp = that.data.dataDetail
+              dataDetailTemp.splice(parseInt(idInfo), 1)
+              that.setData({
+                'dataDetail': dataDetailTemp
+              })
+            },
+            fail: console.error
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })  
+  },
+  //图片缩略图到原图显示
+  previewImage: function (event) {
+    var that = this
+    var current = event.target.dataset.src
+    var id = event.target.dataset.id
+    var fileLocalPathList = [that.data.dataDetail[id]['imageId']]
+    wx.previewImage({
+      current: current,
+      urls: fileLocalPathList
     })
   },
   // 点击名称显示此条目的详细信息
@@ -47,11 +78,12 @@ Page({
     var idInfo = event.target.dataset.id
     var name = that.data.dataDetail[parseInt(idInfo)]["name"]
     var num = that.data.dataDetail[parseInt(idInfo)]["num"]
+    var imageId = that.data.dataDetail[parseInt(idInfo)]["imageId"]
     var positionMax = that.data.dataDetail[parseInt(idInfo)]["positionMax"]
     var positionMin = that.data.dataDetail[parseInt(idInfo)]["positionMin"]
     var geziId = that.data.dataDetail[parseInt(idInfo)]["id"]
     wx.navigateTo({
-      url: '../showdetail/showdetail?name=' + name + '&num=' + num + '&positionMax='+positionMax+'&positionMin='+positionMin+'&geziId=' + geziId,
+      url: '../showdetail/showdetail?name=' + name + '&num=' + num + '&positionMax='+positionMax+'&positionMin='+positionMin+'&geziId=' + geziId+'&imageId='+imageId,
     })
   },
   //刷新数据
