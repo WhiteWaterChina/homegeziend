@@ -1,7 +1,6 @@
 <!--pages/showdata/showdata.wxml-->
 <view class='class-title'>
-  <text class='class-title-text'>显示{{positionMax}}里的{{positionMin}}的第{{idInfo}}号格子</text>
-  <image src='/images/plus.png' class='class-plus-image' bindtap='additem'></image>
+  <text class='class-title-text'>显示所有格子的所有物品</text>
 </view>
 
 <view class='class-mainbody'>
@@ -20,7 +19,7 @@
         <image class='image-body' src='{{item.imageId}}' data-src='{{item.imageId}}' data-id='{{index}}' mode='aspectFit' bindtap='previewImage'></image>
         <text class='text-name-body' bindtap='showdetail' data-id='{{index}}'>{{item.name}}</text>
         <text class='text-number-body' bindtap='showdetail' data-id='{{index}}'>{{item.num}}</text>
-        <text class='text-position-body' bindtap='showdetail' data-id='{{index}}'>{{item.positionMin}}</text>
+        <text class='text-position-body' bindtap='showdetail' data-id='{{index}}'>{{item.positionMax}}</text>
         <image class='image-reduce-body' src='/images/reduce.png' bindtap='reduceItem' data-id='{{index}}'></image>
       </view>
     </view>

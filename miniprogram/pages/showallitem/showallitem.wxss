@@ -1,0 +1,133 @@
+/* pages/showdata/showdata.wxss */
+.class-title {
+  margin-top: 10px;
+  color: #993300;
+}
+.class-plus-image {
+  position: absolute;
+  right: 20rpx;
+  height: 30px;
+  width: 30px;
+}
+.class-mainbody {
+  display: flex;
+  flex-flow: column;
+  margin-top: 50px;
+}
+.title-mainbody {
+  height: 20px;
+}
+.line-total {
+  margin-top: 30px;
+}
+.class-line {
+  height: 30px; 
+  border: 1px solid #d0d0d0;
+  display: flex;
+  flex-flow: row;
+}
+.class-line-left {
+  border: 1px solid green;
+}
+/* 标题行 */
+.index-title {
+  width: 40rpx;
+  height: 30px;
+  text-align: center;
+}
+.image-title {
+  width: 100rpx;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  left: 85rpx;
+}
+.text-name-title {
+  text-align: center;
+  position: fixed;
+  left: 200rpx;
+  width: 150rpx;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-number-title {
+  text-align: center;
+  position: relative;
+  left: 300rpx;
+  width: 40rpx;
+  height: 28px;
+}
+.text-number {
+  text-align: left;
+  position: relative;
+  left: 400rpx;
+  width: 40rpx;
+  height: 30px;
+}
+.text-position-title {
+  text-align: center;
+  width: 150rpx;
+  height: 30px;
+  position: fixed;
+  right: 110rpx;
+}
+.image-reduce-title {
+  width: 80rpx;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  right: 10rpx;
+  }
+  /* 具体数据 */
+  .index-body {
+  width: 40rpx;
+  height: 30px;
+  text-align: center;
+}
+.image-body {
+  width: 100rpx;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  left: 85rpx;
+}
+.text-name-body {
+  text-align: center;
+  position: fixed;
+  left: 200rpx;
+  width: 150rpx;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.text-number-body {
+  text-align: left;
+  position: relative;
+  left: 400rpx;
+  width: 40rpx;
+  height: 30px;
+}
+.text-position-body {
+  text-align: center;
+  width: 150rpx;
+  height: 30px;
+  position: fixed;
+  right: 110rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+
+}
+.image-reduce-body {
+  width: 80rpx;
+  height: 30px;
+  text-align: center;
+  position: fixed;
+  right: 10rpx;
+  }
+
+
+

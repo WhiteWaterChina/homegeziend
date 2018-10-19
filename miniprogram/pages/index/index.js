@@ -15,6 +15,12 @@ Page({
       url: '../search/search?searchkey=' + that.data.searchKey
     })
   },
+  showallitem: function(event) {
+    var that = this
+    wx.navigateTo({
+      url: '../showallitem/showallitem'
+    })
+  },
   inputkey: function (event) {
     var that = this
     that.setData({

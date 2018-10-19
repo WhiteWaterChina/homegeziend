@@ -15,6 +15,10 @@
     <view class='sousuo' bindtap="search">搜索</view>
   </view>
 </view>
+<!-- 显示全部 -->
+  <view>
+    <button class='showallitem' bindtap='showallitem'>显示所有已存在的物件</button>
+  </view>
 <view class="userinfo">
   <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" >登陆</button>
 </view>

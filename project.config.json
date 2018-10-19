@@ -11,6 +11,7 @@
 	"appid": "wx066de1984f2086ed",
 	"projectname": "homegeziend",
 	"libVersion": "2.3.0",
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,
